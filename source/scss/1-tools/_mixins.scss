@@ -1,0 +1,228 @@
+// Define the breakpoints
+$breakpoint-small: 600px;
+$breakpoint-med-small: 960px;
+$breakpoint-med: 1175px;
+
+@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+
+  @if $size == 'small' {
+    @media screen and ($type + -width: $breakpoint-small) {
+        @content;
+    }
+  }
+
+  @else if $size == 'med-small' {
+    @media screen and ($type + -width: $breakpoint-med-small) {
+        @content;
+    }
+  }
+
+  @else if $size == 'med' {
+    @media screen and ($type + -width: $breakpoint-med) {
+        @content;
+    }
+  }
+
+ @else if $size == 'large' {
+    @media screen and ($type + -width: $breakpoint-med) {
+        @content;
+    }
+  }
+
+  @else if $size == 'custom' {
+    @media screen and ($type + -width: $pixels + px) {
+     @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
+
+// Text-align justify
+// For perfectly aligned grids that don't rely on floating elements and difficult calculations
+%justify {
+  text-align: justify;
+  &:after {
+    display: inline-block;
+    width: 100%;
+    // adds a false last line to the content so justify is applied
+    content: '';
+  }
+}
+
+// Centering element 
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Centering element flexbox
+@mixin flex-center {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+// Clearfix
+%clearfix {
+  *zoom: 1;
+  &:after {
+    display: table;
+    clear: both;
+    line-height: 0;
+    content: '';
+  }
+}
+
+// Ghost Vertical Align
+@mixin ghostVerticalAlign($pseudoEl: before) {
+  &:#{$pseudoEl} {
+    display: inline-block;
+    width: .1px;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+  }
+}
+%vertical-align {
+  @include ghostVerticalAlign();
+}
+
+// Animation
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+  // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+  -webkit-animation: $name $duration $iterations $timing-function $delay;
+  -moz-animation: $name $duration $iterations $timing-function $delay;
+  -o-animation: $name $duration $iterations $timing-function $delay;
+  animation: $name $duration $iterations $timing-function $delay;
+}
+
+// Triangle
+// @include triangle within a pseudo element and add positioning properties (ie. top, left)
+// $direction: up, down, left, right
+@mixin triangle($direction, $size: 8px, $color: #222) {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  @if ($direction == 'up') {
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+  }
+  @else if ($direction == 'down') {
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
+    border-left: $size solid transparent;
+  }
+  @else if ($direction == 'left') {
+    border-top: $size solid transparent;
+    border-right: $size solid $color;
+    border-bottom: $size solid transparent;
+  }
+  @else if ($direction == 'right') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+// HUI Tooltips
+@mixin hui_tooltip($content: attr(data-tooltip), $direction: top) {
+  position: relative;
+  &:before,
+  &:after {
+    z-index: 98;
+    display: none;
+  }
+  &:hover {
+    &:after {
+      position: absolute;
+      display: block;
+      padding: 3px 6px;
+      font-size: 12px;
+      color: #fff;
+      background-color: #222;
+      text-shadow: 1px 1px #000;
+      // for text bubble
+      content: $content;
+      white-space: nowrap;
+    }
+    @if ($direction == 'top') {
+      &:before {
+        top: -2px;
+        left: 47%;
+        margin-top: 0;
+        @include triangle(down, 6px, #222);
+      }
+      &:after {
+        top: -28px;
+        left: 47%;
+        margin-left: -20px;
+      }
+    }
+    @else if ($direction == 'bottom') {
+      &:before {
+        top: auto;
+        bottom: -2px;
+        left: 47%;
+        margin-top: 0;
+        @include triangle(up, 6px, #222);
+      }
+      &:after {
+        bottom: -28px;
+        left: 47%;
+        margin-left: -20px;
+      }
+    }
+  }
+}
+
+@mixin last {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+@mixin hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+@mixin invisible {
+  visibility: hidden;
+}

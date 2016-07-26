@@ -1,0 +1,79 @@
+/* -------- TYPOGRAPHY -------- */
+html {
+  font-size: $font-size-base;
+}
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+//	Headings
+.huge,
+.large,
+.bigger,
+.big,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headings;
+  font-weight: bold;
+  color: $headings-color;
+}
+
+.huge,
+h1 {
+  font-size: $font-size-h1;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.large,
+h2 {
+  font-size: $font-size-h2;
+  line-height: 1.14;
+}
+
+.bigger,
+h3 {
+  font-size: $font-size-h3;
+  line-height: 1.38;
+}
+
+.big,
+h4 {
+  font-size: $font-size-h4;
+  line-height: 1.38;
+}
+
+.small,
+small {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+// Basic Text Style
+p {
+  margin: 0 0 20px 0;
+  font-size: $font-size;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+hr {
+  clear: both;
+  height: 0;
+  margin: 10px 0 30px;
+  border: solid $gray-80;
+  border-width: 1px 0 0;
+}

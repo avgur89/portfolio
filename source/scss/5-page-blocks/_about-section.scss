@@ -1,0 +1,21 @@
+/* -------- ABOUT SECTION -------- */
+.about {
+  z-index: 3;
+  position: relative;
+  font-family: 'OswaldLight';
+  background-color: #fff;
+
+  .about-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+  }
+
+  .about-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,19 @@
+/* -------- LINKS -------- */
+a {
+  font-weight: bold;
+  color: $link-color;
+  outline: none;
+  transition: all .2s linear;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+
+  &:focus,
+  &:active {
+    color: darken($link-color-hover, 10%);
+    outline: none;
+    text-decoration: none;
+  }
+}

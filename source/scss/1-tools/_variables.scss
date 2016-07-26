@@ -1,0 +1,62 @@
+//
+// Some Useful color Vars via http://clrs.cc/
+//
+
+// Cool
+$aqua: #7fdbff;
+$navy: #001f3f;
+$blue: #0074d9;
+$teal: #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime: #01ff70;
+
+
+// Warm
+$yellow: #ffdc00;
+$orange: #ff851b;
+$red: #ff4136;
+$fuchsia: #f012be;
+$purple: #b10dc9;
+$maroon: #85144b;
+
+
+// Main colors
+$gray-20: #333;
+$gray-50: #808080;
+$gray-70: #adadad;
+$gray-80: #ccc;
+$gray-90: #e6e6e6;
+$gray-92: #f7f7f9;
+
+
+$text-color: #555;
+$text-color-white: #f4f4f4;
+$headings-color: #555;
+$link-color: $gray-90;
+$link-color-hover: darken($link-color, 15%);
+$border-color: $gray-80;
+$border-color-hover: darken($border-color, 15%);;
+
+
+// Background colors
+$main-bg: #f5f3f2;
+$secondary-bg: #f5f5f5;
+$dark-bg: #1c1e22;
+
+
+// Fonts
+$font-family: 'OpenSansRegular', Helvetica, Arial, sans-serif;
+$font-family-headings: 'OswaldLight', Georgia, Times, serif;
+$font-size-base: 62.5%;
+$font-size: 1.4rem;
+$font-size-small: 1.1rem;
+$line-height: 1.8;
+$headings-weight: 700;
+$headings-line-height: 1.2;
+$font-size-h1: 3.6rem;
+$font-size-h2: 3rem;
+$font-size-h3: 2.4rem;
+$font-size-h4: 1.8rem;
+$font-size-h5: $font-size;
+$font-size-h6: $font-size;

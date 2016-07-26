@@ -1,0 +1,7 @@
+#Untracked folders
+node_modules
+bower_components
+_design
+
+#Untracked files
+Thumbs.db
