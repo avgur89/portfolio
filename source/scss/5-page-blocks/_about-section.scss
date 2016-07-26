@@ -5,6 +5,15 @@
   font-family: 'OswaldLight';
   background-color: #fff;
 
+  &--spa {
+    border-bottom: 1px dotted $text-color;
+
+    &:hover {
+      @include hui_tooltip('Single Page Application', bottom);
+      cursor: help;
+    }
+  }
+
   .about-image {
     position: absolute;
     z-index: -1;

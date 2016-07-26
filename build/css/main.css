@@ -772,6 +772,41 @@ input {
   position: relative;
   font-family: 'OswaldLight';
   background-color: #fff; }
+  .about--spa {
+    border-bottom: 1px dotted #555; }
+    .about--spa:hover {
+      position: relative;
+      cursor: help; }
+      .about--spa:hover:before, .about--spa:hover:after {
+        z-index: 98;
+        display: none; }
+      .about--spa:hover:hover:after {
+        position: absolute;
+        display: block;
+        padding: 3px 6px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #222;
+        text-shadow: 1px 1px #000;
+        content: "Single Page Application";
+        white-space: nowrap; }
+      .about--spa:hover:hover:before {
+        top: auto;
+        bottom: -2px;
+        left: 47%;
+        margin-top: 0;
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        content: '';
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #222;
+        border-left: 6px solid transparent; }
+      .about--spa:hover:hover:after {
+        bottom: -28px;
+        left: 47%;
+        margin-left: -20px; }
   .about .about-image {
     position: absolute;
     z-index: -1;
@@ -800,138 +835,138 @@ input {
     font-size: 20px;
     font-size: 2rem;
     font-weight: normal; }
-    .skills .skills-desc--w3c:hover {
-      position: relative; }
-      .skills .skills-desc--w3c:hover:before, .skills .skills-desc--w3c:hover:after {
-        z-index: 98;
-        display: none; }
-      .skills .skills-desc--w3c:hover:hover:after {
-        position: absolute;
-        display: block;
-        padding: 3px 6px;
-        font-size: 12px;
-        color: #fff;
-        background-color: #222;
-        text-shadow: 1px 1px #000;
-        content: "World Wide Web Consortium";
-        white-space: nowrap; }
-      .skills .skills-desc--w3c:hover:hover:before {
-        top: auto;
-        bottom: -2px;
-        left: 47%;
-        margin-top: 0;
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        content: '';
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #222;
-        border-left: 6px solid transparent; }
-      .skills .skills-desc--w3c:hover:hover:after {
-        bottom: -28px;
-        left: 47%;
-        margin-left: -20px; }
-    .skills .skills-desc--html:hover {
-      position: relative; }
-      .skills .skills-desc--html:hover:before, .skills .skills-desc--html:hover:after {
-        z-index: 98;
-        display: none; }
-      .skills .skills-desc--html:hover:hover:after {
-        position: absolute;
-        display: block;
-        padding: 3px 6px;
-        font-size: 12px;
-        color: #fff;
-        background-color: #222;
-        text-shadow: 1px 1px #000;
-        content: "Hyper Text Markup Language 5";
-        white-space: nowrap; }
-      .skills .skills-desc--html:hover:hover:before {
-        top: auto;
-        bottom: -2px;
-        left: 47%;
-        margin-top: 0;
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        content: '';
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #222;
-        border-left: 6px solid transparent; }
-      .skills .skills-desc--html:hover:hover:after {
-        bottom: -28px;
-        left: 47%;
-        margin-left: -20px; }
-    .skills .skills-desc--css:hover {
-      position: relative; }
-      .skills .skills-desc--css:hover:before, .skills .skills-desc--css:hover:after {
-        z-index: 98;
-        display: none; }
-      .skills .skills-desc--css:hover:hover:after {
-        position: absolute;
-        display: block;
-        padding: 3px 6px;
-        font-size: 12px;
-        color: #fff;
-        background-color: #222;
-        text-shadow: 1px 1px #000;
-        content: "Cascading Style Sheets";
-        white-space: nowrap; }
-      .skills .skills-desc--css:hover:hover:before {
-        top: auto;
-        bottom: -2px;
-        left: 47%;
-        margin-top: 0;
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        content: '';
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #222;
-        border-left: 6px solid transparent; }
-      .skills .skills-desc--css:hover:hover:after {
-        bottom: -28px;
-        left: 47%;
-        margin-left: -20px; }
-    .skills .skills-desc--scss:hover {
-      position: relative; }
-      .skills .skills-desc--scss:hover:before, .skills .skills-desc--scss:hover:after {
-        z-index: 98;
-        display: none; }
-      .skills .skills-desc--scss:hover:hover:after {
-        position: absolute;
-        display: block;
-        padding: 3px 6px;
-        font-size: 12px;
-        color: #fff;
-        background-color: #222;
-        text-shadow: 1px 1px #000;
-        content: "Sassy CSS";
-        white-space: nowrap; }
-      .skills .skills-desc--scss:hover:hover:before {
-        top: auto;
-        bottom: -2px;
-        left: 47%;
-        margin-top: 0;
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        content: '';
-        border-right: 6px solid transparent;
-        border-bottom: 6px solid #222;
-        border-left: 6px solid transparent; }
-      .skills .skills-desc--scss:hover:hover:after {
-        bottom: -28px;
-        left: 47%;
-        margin-left: -20px; }
     .skills .skills-desc .skills-info {
       border-bottom: 1px dotted #555; }
       .skills .skills-desc .skills-info:hover {
         cursor: help; }
+      .skills .skills-desc .skills-info--w3c:hover {
+        position: relative; }
+        .skills .skills-desc .skills-info--w3c:hover:before, .skills .skills-desc .skills-info--w3c:hover:after {
+          z-index: 98;
+          display: none; }
+        .skills .skills-desc .skills-info--w3c:hover:hover:after {
+          position: absolute;
+          display: block;
+          padding: 3px 6px;
+          font-size: 12px;
+          color: #fff;
+          background-color: #222;
+          text-shadow: 1px 1px #000;
+          content: "World Wide Web Consortium";
+          white-space: nowrap; }
+        .skills .skills-desc .skills-info--w3c:hover:hover:before {
+          top: auto;
+          bottom: -2px;
+          left: 47%;
+          margin-top: 0;
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          content: '';
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid #222;
+          border-left: 6px solid transparent; }
+        .skills .skills-desc .skills-info--w3c:hover:hover:after {
+          bottom: -28px;
+          left: 47%;
+          margin-left: -20px; }
+      .skills .skills-desc .skills-info--html:hover {
+        position: relative; }
+        .skills .skills-desc .skills-info--html:hover:before, .skills .skills-desc .skills-info--html:hover:after {
+          z-index: 98;
+          display: none; }
+        .skills .skills-desc .skills-info--html:hover:hover:after {
+          position: absolute;
+          display: block;
+          padding: 3px 6px;
+          font-size: 12px;
+          color: #fff;
+          background-color: #222;
+          text-shadow: 1px 1px #000;
+          content: "Hyper Text Markup Language 5";
+          white-space: nowrap; }
+        .skills .skills-desc .skills-info--html:hover:hover:before {
+          top: auto;
+          bottom: -2px;
+          left: 47%;
+          margin-top: 0;
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          content: '';
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid #222;
+          border-left: 6px solid transparent; }
+        .skills .skills-desc .skills-info--html:hover:hover:after {
+          bottom: -28px;
+          left: 47%;
+          margin-left: -20px; }
+      .skills .skills-desc .skills-info--css:hover {
+        position: relative; }
+        .skills .skills-desc .skills-info--css:hover:before, .skills .skills-desc .skills-info--css:hover:after {
+          z-index: 98;
+          display: none; }
+        .skills .skills-desc .skills-info--css:hover:hover:after {
+          position: absolute;
+          display: block;
+          padding: 3px 6px;
+          font-size: 12px;
+          color: #fff;
+          background-color: #222;
+          text-shadow: 1px 1px #000;
+          content: "Cascading Style Sheets";
+          white-space: nowrap; }
+        .skills .skills-desc .skills-info--css:hover:hover:before {
+          top: auto;
+          bottom: -2px;
+          left: 47%;
+          margin-top: 0;
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          content: '';
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid #222;
+          border-left: 6px solid transparent; }
+        .skills .skills-desc .skills-info--css:hover:hover:after {
+          bottom: -28px;
+          left: 47%;
+          margin-left: -20px; }
+      .skills .skills-desc .skills-info--scss:hover {
+        position: relative; }
+        .skills .skills-desc .skills-info--scss:hover:before, .skills .skills-desc .skills-info--scss:hover:after {
+          z-index: 98;
+          display: none; }
+        .skills .skills-desc .skills-info--scss:hover:hover:after {
+          position: absolute;
+          display: block;
+          padding: 3px 6px;
+          font-size: 12px;
+          color: #fff;
+          background-color: #222;
+          text-shadow: 1px 1px #000;
+          content: "Sassy CSS";
+          white-space: nowrap; }
+        .skills .skills-desc .skills-info--scss:hover:hover:before {
+          top: auto;
+          bottom: -2px;
+          left: 47%;
+          margin-top: 0;
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          content: '';
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid #222;
+          border-left: 6px solid transparent; }
+        .skills .skills-desc .skills-info--scss:hover:hover:after {
+          bottom: -28px;
+          left: 47%;
+          margin-left: -20px; }
     .skills .skills-desc .skills-link {
       color: #e90d00;
       font-weight: normal; }
@@ -956,6 +991,43 @@ input {
   .works .works-heading {
     font-weight: normal;
     color: #f4f4f4; }
+  .works .works-list {
+    list-style-type: none;
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto; }
+  .works .works-item-wrapper {
+    position: relative; }
+    .works .works-item-wrapper:hover {
+      cursor: pointer; }
+      .works .works-item-wrapper:hover .works-item-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6); }
+      .works .works-item-wrapper:hover .works-item-desc {
+        display: block; }
+  .works .works-item {
+    padding: 10px; }
+    .works .works-item-heading {
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #f4f4f4; }
+    .works .works-item-category {
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #f4f4f4; }
+    .works .works-item-link {
+      color: #f4f4f4; }
+  .works .works-item-desc {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 /* -------- RESUME SECTION -------- */
 .resume {

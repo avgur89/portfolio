@@ -6,4 +6,57 @@
     font-weight: normal;
     color: $text-color-white;
   }
+
+  .works-list {
+    list-style-type: none;
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .works-item-wrapper {
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+
+      .works-item-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+
+      .works-item-desc {
+        display: block;
+      }
+    }
+  }
+
+  .works-item {
+    padding: 10px;
+
+    &-heading {
+      font-weight: normal;
+      text-transform: uppercase;
+      color: $text-color-white;
+    }
+
+    &-category {
+      font-weight: normal;
+      text-transform: uppercase;
+      color: $text-color-white;
+    }
+
+    &-link {
+      color: $text-color-white;
+    }
+  }
+
+  .works-item-desc {
+    display: none;
+    @include center('both');
+  }
 }

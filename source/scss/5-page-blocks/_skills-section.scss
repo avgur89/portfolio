@@ -19,34 +19,35 @@
     font-size: 2rem;
     font-weight: normal;
 
-    &--w3c {
-      &:hover {
-        @include hui_tooltip('World Wide Web Consortium', bottom);
-      }
-    }
-
-    &--html {
-      &:hover {
-        @include hui_tooltip('Hyper Text Markup Language 5', bottom);
-      }
-    }
-
-    &--css {
-      &:hover {
-        @include hui_tooltip('Cascading Style Sheets', bottom);
-      }
-    }
-
-    &--scss {
-      &:hover {
-        @include hui_tooltip('Sassy CSS', bottom);
-      }
-    }
-
     .skills-info {
       border-bottom: 1px dotted $text-color;
+
       &:hover {
         cursor: help;
+      }
+
+      &--w3c {
+        &:hover {
+          @include hui_tooltip('World Wide Web Consortium', bottom);
+        }
+      }
+
+      &--html {
+        &:hover {
+          @include hui_tooltip('Hyper Text Markup Language 5', bottom);
+        }
+      }
+
+      &--css {
+        &:hover {
+          @include hui_tooltip('Cascading Style Sheets', bottom);
+        }
+      }
+
+      &--scss {
+        &:hover {
+          @include hui_tooltip('Sassy CSS', bottom);
+        }
       }
     }
 
