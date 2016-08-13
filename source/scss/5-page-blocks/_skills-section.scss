@@ -1,79 +1,90 @@
 /* -------- SKILLS SECTION -------- */
+
 .skills {
   z-index: 2;
   position: relative;
   background-color: $secondary-bg;
+}
 
-  .skills-heading {
-    font-weight: normal;
+.skills__wrapper {
+  @include container();
+}
+
+.skills__heading {
+  font-weight: normal;
+}
+
+.skills__icon {
+  padding-bottom: 50px;
+}
+
+.skills__desc {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.skills__info {
+  border-bottom: 1px dotted $text-color;
+
+  &:hover {
+    cursor: help;
   }
 
-  .skills-icon {
-    padding-bottom: 50px;
-  }
-
-  .skills-desc {
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 100px;
-    font-size: 2rem;
-    font-weight: normal;
-
-    .skills-info {
-      border-bottom: 1px dotted $text-color;
-
-      &:hover {
-        cursor: help;
-      }
-
-      &--w3c {
-        &:hover {
-          @include hui_tooltip('World Wide Web Consortium', bottom);
-        }
-      }
-
-      &--html {
-        &:hover {
-          @include hui_tooltip('Hyper Text Markup Language 5', bottom);
-        }
-      }
-
-      &--css {
-        &:hover {
-          @include hui_tooltip('Cascading Style Sheets', bottom);
-        }
-      }
-
-      &--scss {
-        &:hover {
-          @include hui_tooltip('Sassy CSS', bottom);
-        }
-      }
+  &--w3c {
+    &:hover {
+      @include hui_tooltip('World Wide Web Consortium', bottom);
     }
+  }
 
-    .skills-link {
-      color: darken($red, 15%);
-      font-weight: normal;
-      &:active,
-      &:focus {
-        color: darken($red, 30%);
-      }
+  &--html {
+    &:hover {
+      @include hui_tooltip('Hyper Text Markup Language 5', bottom);
+    }
+  }
+
+  &--css {
+    &:hover {
+      @include hui_tooltip('Cascading Style Sheets', bottom);
+    }
+  }
+
+  &--scss {
+    &:hover {
+      @include hui_tooltip('Sassy CSS', bottom);
     }
   }
 }
 
-/* -------- skills-progress-bar -------- */
+.skills__link {
+  color: darken($red, 15%);
+  font-weight: normal;
 
-.skillbar-bar {
+  &:hover {
+    color: darken($red, 20%);
+  }
+  
+  &:active,
+  &:focus {
+    color: darken($red, 30%);
+  }
+}
+
+
+/* -------- Skills-progress-bar -------- */
+
+.skillbar__bar {
   position: relative;
   width: 100%;
   height: 2px;
   margin-bottom: 60px;
+}
 
-  .skillbar-desc {
-    position: absolute;
-    top: -15px;
-    left: 10px;
-    text-transform: uppercase;
-  }
+.skillbar__desc {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  text-transform: uppercase;
 }

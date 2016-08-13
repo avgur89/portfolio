@@ -1,30 +1,35 @@
 /* -------- ABOUT SECTION -------- */
+
 .about {
   z-index: 3;
   position: relative;
   font-family: 'OswaldLight';
   background-color: #fff;
+}
 
-  &--spa {
-    border-bottom: 1px dotted $text-color;
+.about__wrapper {
+  @include container();
+}
 
-    &:hover {
-      @include hui_tooltip('Single Page Application', bottom);
-      cursor: help;
-    }
-  }
+.about__image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
 
-  .about-image {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    right: 0;
-  }
+.about__desc {
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 3rem;
+}
 
-  .about-desc {
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 3rem;
+.about__spa {
+  border-bottom: 1px dotted $text-color;
+
+  &:hover {
+    @include hui_tooltip('Single Page Application', bottom);
+    cursor: help;
   }
 }

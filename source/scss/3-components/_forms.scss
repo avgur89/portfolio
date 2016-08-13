@@ -2,12 +2,12 @@
 input {
   padding: 5px 10px;
   outline: none;
-  color: #555;
-  border: 1px solid #bbb;
+  color: $text-color;
+  border: 1px solid $border-color;
   border-radius: 4px;
-  
+
   &:active,
   &:focus {
-    border-color: #888;
+    border-color: $border-color-hover;
   }
 }

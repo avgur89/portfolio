@@ -1,1 +1,9 @@
 /* -------- CONTACT SECTION -------- */
+
+.contact__wrapper {
+  @include container();
+}
+
+.contact__heading {
+  font-weight: normal;
+}

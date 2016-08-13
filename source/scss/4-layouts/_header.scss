@@ -1,5 +1,6 @@
-/* -------- HEADER  -------- */
-.header {
+/* -------- PAGE-HEADER  -------- */
+
+.page-header {
   position: relative;
   min-height: 100%;
   background-image: url('../img/header-bg2.jpg');
@@ -29,71 +30,77 @@
 }
 
 
-/* -------- HEADER-MENU  -------- */
-.header-menu {
+/* -------- PAGE HEADER-MENU  -------- */
+
+.page-header__wrapper {
+  @include container();
+}
+
+.page-header__menu {
   padding: 10px 0;
   background-color: #222;
 }
 
-.hero {
+.page-header__hero {
   @include center(both);
   text-align: center;
   text-transform: uppercase;
+}
 
-  .hero-heading {
-    font-weight: normal;
-    color: $text-color-white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+.page-header__heading {
+  font-weight: normal;
+  color: $text-color-white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 
-    &--primary {
-      font-size: 6rem;
-      letter-spacing: 5px;
-    }
+  &--primary {
+    font-size: 6rem;
+    letter-spacing: 5px;
+  }
 
-    &--secondary {
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
+  &--secondary {
+    font-size: 2rem;
+    letter-spacing: 1px;
   }
 }
 
 
-/* -------- header-logo -------- */
-.header-logo {
-  &-icon {
-    width: 50px;
-    height: 50px;
-  }
+/* -------- Header-logo -------- */
+
+.page-header__svg {
+  width: 50px;
+  height: 50px;
 }
 
-/* -------- header-navigation -------- */
-.header-nav-list {
+
+/* -------- Header-navigation -------- */
+
+.main-nav__list {
   padding: 0;
   margin: 0;
   list-style: none;
   text-align: right;
+}
 
-  .header-nav-item {
-    display: inline-block;
-    text-align: right;
+.main-nav__item {
+  display: inline-block;
+  text-align: right;
+}
+
+.main-nav__link {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 5px;
+  color: $gray_80;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+
+  &:hover {
+    color: $text-color-white;
   }
 
-  .header-nav-link {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 5px;
-    color: $gray_80;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-
-    &:hover {
-      color: $text-color-white;
-    }
-
-    &:active,
-    &:focus {
-      color: $gray-70;
-    }
+  &:active,
+  &:focus {
+    color: $gray-70;
   }
 }

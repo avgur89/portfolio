@@ -5,16 +5,16 @@
 .contact {
   text-align: center;
   padding: 150px 0;
+}
 
-  .about-heading,
-  .skills-heading,
-  .works-heading,
-  .resume-heading,
-  .contact-heading {
-    padding-bottom: 50px;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: normal;
-    letter-spacing: 5px;
-  }
+.about__heading,
+.skills__heading,
+.works__heading,
+.resume__heading,
+.contact__heading {
+  padding-bottom: 50px;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 5px;
 }

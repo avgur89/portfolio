@@ -2,7 +2,7 @@
 
 // Progress bar plugin
 // http://kimmobrunfeldt.github.io/progressbar.js/
-$('.skillbar-bar').each(function() {
+$('.skillbar__bar').each(function() {
   var bar = new ProgressBar.Line(this, {
     strokeWidth: 3,
     easing: 'easeInOut',

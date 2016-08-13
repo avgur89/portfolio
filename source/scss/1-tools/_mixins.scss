@@ -1,30 +1,31 @@
+// Container wrapper
+@mixin container() {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 // Define the breakpoints
-$breakpoint-small: 600px;
-$breakpoint-med-small: 960px;
-$breakpoint-med: 1175px;
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1200px;
 
 @mixin screen($size, $type: max, $pixels: $breakpoint-small) {
 
-  @if $size == 'small' {
+  @if $size == 'mobile' {
     @media screen and ($type + -width: $breakpoint-small) {
         @content;
     }
   }
 
-  @else if $size == 'med-small' {
-    @media screen and ($type + -width: $breakpoint-med-small) {
+  @else if $size == 'tablet' {
+    @media screen and ($type + -width: $breakpoint-medium) {
         @content;
     }
   }
 
-  @else if $size == 'med' {
-    @media screen and ($type + -width: $breakpoint-med) {
-        @content;
-    }
-  }
-
- @else if $size == 'large' {
-    @media screen and ($type + -width: $breakpoint-med) {
+ @else if $size == 'desktop' {
+    @media screen and ($type + -width: $breakpoint-large) {
         @content;
     }
   }
@@ -52,7 +53,7 @@ $breakpoint-med: 1175px;
   }
 }
 
-// Centering element 
+// Centering element
 @mixin center($position) {
   position: absolute;
 
@@ -79,24 +80,6 @@ $breakpoint-med: 1175px;
   }
 }
 
-// Centering element flexbox
-@mixin flex-center {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: row;
-
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-
 // Clearfix
 %clearfix {
   *zoom: 1;
@@ -106,20 +89,6 @@ $breakpoint-med: 1175px;
     line-height: 0;
     content: '';
   }
-}
-
-// Ghost Vertical Align
-@mixin ghostVerticalAlign($pseudoEl: before) {
-  &:#{$pseudoEl} {
-    display: inline-block;
-    width: .1px;
-    height: 100%;
-    content: '';
-    vertical-align: middle;
-  }
-}
-%vertical-align {
-  @include ghostVerticalAlign();
 }
 
 // Animation
