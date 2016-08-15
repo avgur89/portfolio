@@ -1003,20 +1003,6 @@ input {
   padding: 0;
   margin: 0 auto; }
 
-.works__item-wrapper {
-  position: relative; }
-  .works__item-wrapper:hover {
-    cursor: pointer; }
-    .works__item-wrapper:hover .works__item-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-color: rgba(0, 0, 0, 0.6); }
-    .works__item-wrapper:hover .works__item-desc {
-      display: block; }
-
 /* -------- Works item -------- */
 .works__item {
   padding: 10px; }
@@ -1031,16 +1017,57 @@ input {
   text-transform: uppercase;
   color: #f4f4f4; }
 
+.works__item-image {
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
+
 .works__item-link {
+  display: inline-block;
+  padding: 10px;
   color: #f4f4f4; }
+  .works__item-link:hover {
+    color: #adadad; }
 
 .works__item-desc {
-  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out; }
+
+.works__item-overlay {
+  position: absolute;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.works__item-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; }
+  .works__item-wrapper:hover {
+    cursor: pointer; }
+    .works__item-wrapper:hover .works__item-overlay {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+    .works__item-wrapper:hover .works__item-desc {
+      opacity: 1;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
+    .works__item-wrapper:hover .works__item-image {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 
 /* -------- RESUME SECTION -------- */
 .resume {
