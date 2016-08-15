@@ -497,7 +497,7 @@ textarea {
  *    letting these items shrink to smaller than their content's default
  *    minimum size.
  */
-.site {
+.page {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -509,13 +509,13 @@ textarea {
   -webkit-flex-direction: column;
   -ms-flex-direction: column; }
 
-.site-header,
-.site-footer {
+.page-header,
+.page-footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   /* 2 */ }
 
-.site-content {
+.page-content {
   -ms-flex: 1 0 auto;
   -webkit-box-flex: 1;
           flex: 1 0 auto;
@@ -608,9 +608,7 @@ hr {
   border: solid #ccc;
   border-width: 1px 0 0; }
 
-/* -------- BUTTONS -------- */
-.btn,
-button,
+/* -------- BUTTONS INPUTS -------- */
 input[type='submit'],
 input[type='reset'],
 input[type='button'] {
@@ -632,13 +630,7 @@ input[type='button'] {
   letter-spacing: 1px;
   letter-spacing: .1rem;
   text-transform: uppercase; }
-  .btn:hover, .btn:active, .btn:focus,
-  button:hover,
-  button:active,
-  button:focus,
-  input[type='submit']:hover,
-  input[type='submit']:active,
-  input[type='submit']:focus,
+  input[type='submit']:hover, input[type='submit']:active, input[type='submit']:focus,
   input[type='reset']:hover,
   input[type='reset']:active,
   input[type='reset']:focus,
@@ -648,6 +640,22 @@ input[type='button'] {
     color: #555;
     border-color: #a6a6a6;
     outline: 0; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-weight: normal;
+  color: #555;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: 1px;
+  letter-spacing: .1rem;
+  text-transform: uppercase; }
 
 /* -------- FORMS -------- */
 input {
@@ -730,13 +738,50 @@ input {
     color: #adadad; }
 
 /* -------- FOOTER -------- */
+.page-footer {
+  padding: 150px 0 20px 0;
+  text-align: center;
+  background-color: #fff; }
+
+.page-footer__wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.page-footer__logo {
+  margin-bottom: 80px;
+  text-align: center; }
+
+.page-footer__social {
+  margin-bottom: 20px; }
+  .page-footer__social--facebook:hover {
+    color: #3b5998; }
+  .page-footer__social--facebook:active, .page-footer__social--facebook:focus {
+    color: #3b5998; }
+  .page-footer__social--linkedin:hover {
+    color: #00a0dc; }
+  .page-footer__social--linkedin:active, .page-footer__social--linkedin:focus {
+    color: #00a0dc; }
+  .page-footer__social--github:hover {
+    color: #333; }
+  .page-footer__social--github:active, .page-footer__social--github:focus {
+    color: #333; }
+
+.page-footer__social-item {
+  display: inline-block;
+  padding: 5px;
+  color: #555; }
+
+.page-footer__copy {
+  display: inline-block; }
+
 .about,
 .skills,
 .works,
 .resume,
 .contact {
-  text-align: center;
-  padding: 150px 0; }
+  padding: 150px 0;
+  text-align: center; }
 
 .about__heading,
 .skills__heading,
@@ -1080,7 +1125,30 @@ input {
   padding: 0 15px; }
 
 .resume__heading {
+  padding-bottom: 20px;
   font-weight: normal; }
+
+.resume__desc {
+  margin-bottom: 50px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #808080; }
+
+.resume__btn {
+  display: inline-block;
+  border: 2px solid #ff938d;
+  border-radius: 0;
+  color: #cf0b00;
+  letter-spacing: 0;
+  outline: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
+  .resume__btn:hover {
+    border-color: #e90d00;
+    color: #cf0b00; }
+  .resume__btn:active, .resume__btn:focus {
+    border-color: #cf0b00;
+    color: #cf0b00; }
 
 /* -------- CONTACT SECTION -------- */
 .contact__wrapper {

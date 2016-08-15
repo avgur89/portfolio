@@ -79,7 +79,7 @@ textarea {
  *    letting these items shrink to smaller than their content's default
  *    minimum size.
  */
-.site {
+.page {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -90,12 +90,12 @@ textarea {
   -ms-flex-direction: column;
 }
 
-.site-header,
-.site-footer {
+.page-header,
+.page-footer {
   flex-shrink: 0; /* 2 */
 }
 
-.site-content {
+.page-content {
   -webkit-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; /* 2 */

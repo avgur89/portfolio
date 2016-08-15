@@ -1,1 +1,63 @@
 /* -------- FOOTER -------- */
+
+.page-footer {
+  padding: 150px 0 20px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.page-footer__wrapper {
+  @include container();
+}
+
+.page-footer__logo {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.page-footer__social {
+  margin-bottom: 20px;
+
+  &--facebook {
+    &:hover {
+      color: #3b5998;
+    }
+
+    &:active,
+    &:focus {
+      color: #3b5998;
+    }
+  }
+
+  &--linkedin {
+    &:hover {
+      color: #00a0dc;
+    }
+
+    &:active,
+    &:focus {
+      color: #00a0dc;
+    }
+  }
+
+  &--github {
+    &:hover {
+      color: #333;
+    }
+
+    &:active,
+    &:focus {
+      color: #333;
+    }
+  }
+}
+
+.page-footer__social-item {
+  display: inline-block;
+  padding: 5px;
+  color: $text-color;
+}
+
+.page-footer__copy {
+  display: inline-block;
+}

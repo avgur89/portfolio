@@ -10,5 +10,33 @@
 }
 
 .resume__heading {
+  padding-bottom: 20px;
   font-weight: normal;
+}
+
+.resume__desc {
+  margin-bottom: 50px;
+  font-size: 1.8rem;
+  color: $gray-50;
+}
+
+.resume__btn {
+  display: inline-block;
+  border: 2px solid lighten($red, 17);
+  border-radius: 0;
+  color: darken($red, 20);
+  letter-spacing: 0;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    border-color: darken($red, 15);
+    color: darken($red, 20);
+  }
+
+  &:active,
+  &:focus {
+    border-color: darken($red, 20);
+    color: darken($red, 20);
+  }
 }
