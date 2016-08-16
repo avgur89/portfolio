@@ -76,6 +76,11 @@ var
 		filename: 'main.js'
 	},
 
+	php = {
+		in: source + 'php/**/*',
+		out: dest + 'php/'
+	},
+
 	syncOpts = {
 		server: {
 			baseDir: dest,
@@ -129,6 +134,14 @@ gulp.task('libs', function() {
 		.pipe(gulp.dest(libs.out));
 });
 
+
+// copy php files
+gulp.task('php', function() {
+	return gulp.src(php.in)
+		.pipe(newer(php.out))
+		.pipe(gulp.dest(php.out));
+});
+
 // compile Sass
 gulp.task('sass', function() {
 	return gulp.src(css.in)
@@ -170,7 +183,7 @@ gulp.task('browsersync', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'js', 'browsersync'], function() {
+gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'js', 'php', 'browsersync'], function() {
 
 	// html changes
 	gulp.watch(html.watch, ['html', browsersync.reload]);
@@ -183,6 +196,9 @@ gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'js', 'browsers
 
 	// libs changes
 	gulp.watch(libs.in, ['libs']);
+
+	// libs changes
+	gulp.watch(php.in, ['php']);
 
 	// sass changes
 	gulp.watch(css.watch, ['sass']);
