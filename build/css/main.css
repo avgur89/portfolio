@@ -526,8 +526,8 @@ a {
   font-weight: bold;
   color: #e6e6e6;
   outline: none;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   text-decoration: none; }
   a:hover {
     color: silver; }
@@ -609,38 +609,6 @@ hr {
   border-width: 1px 0 0; }
 
 /* -------- BUTTONS INPUTS -------- */
-input[type='submit'],
-input[type='reset'],
-input[type='button'] {
-  display: inline-block;
-  box-sizing: border-box;
-  height: 38px;
-  padding: 0 30px;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 38px;
-  color: #555;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: transparent;
-  cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  text-decoration: none;
-  letter-spacing: 1px;
-  letter-spacing: .1rem;
-  text-transform: uppercase; }
-  input[type='submit']:hover, input[type='submit']:active, input[type='submit']:focus,
-  input[type='reset']:hover,
-  input[type='reset']:active,
-  input[type='reset']:focus,
-  input[type='button']:hover,
-  input[type='button']:active,
-  input[type='button']:focus {
-    color: #555;
-    border-color: #a6a6a6;
-    outline: 0; }
-
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -653,13 +621,11 @@ input[type='button'] {
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
-  letter-spacing: 1px;
-  letter-spacing: .1rem;
   text-transform: uppercase; }
 
 /* -------- FORMS -------- */
 input {
-  padding: 5px 10px;
+  padding: 8px 10px;
   outline: none;
   color: #555;
   border: 1px solid #ccc;
@@ -1159,7 +1125,90 @@ input {
 .contact__heading {
   font-weight: normal; }
 
-@media only screen and (min-width: 48em) {
+.contact__info {
+  position: relative;
+  min-height: 150px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-image: url("../img/svg/contact-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: #fff; }
+
+.contact__info-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.contact__email-link,
+.contact__phone-link {
+  display: inline-block;
+  padding: 5px;
+  font-family: "OswaldLight", Georgia, Times, serif;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #555; }
+  .contact__email-link:hover,
+  .contact__phone-link:hover {
+    color: #000; }
+  .contact__email-link:active, .contact__email-link:focus,
+  .contact__phone-link:active,
+  .contact__phone-link:focus {
+    color: #000; }
+
+.contact__email {
+  display: block; }
+
+.contact__phone {
+  display: block; }
+
+/* -------- Contact Form -------- */
+.contact__form {
+  max-width: 800px;
+  margin: 0 auto; }
+
+.contact__label {
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: left; }
+
+.contact__input {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  text-align: left; }
+
+.contact__input-textarea {
+  margin-bottom: 50px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  color: #555; }
+  .contact__input-textarea:active, .contact__input-textarea:focus {
+    border-color: #a6a6a6; }
+
+.contact__btn-submit {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  border: 1px solid #1c1e22;
+  outline: none;
+  color: #f4f4f4;
+  background-color: #1c1e22;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .contact__btn-submit:hover {
+    background-color: #000;
+    border-color: #000; }
+  .contact__btn-submit:active, .contact__btn-submit:focus {
+    background-color: #000;
+    border-color: #000; }
+  @media only screen and (min-width: 48em) {
   .container {
     width: 46rem; }
   .col-sm,
@@ -1303,8 +1352,7 @@ input {
     -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
     order: 1; } }
-
-@media only screen and (min-width: 62em) {
+  @media only screen and (min-width: 62em) {
   .container {
     width: 61rem; }
   .col-md,
@@ -1448,8 +1496,7 @@ input {
     -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
     order: 1; } }
-
-@media only screen and (min-width: 75em) {
+  @media only screen and (min-width: 75em) {
   .container {
     width: 71rem; }
   .col-lg,
@@ -1593,19 +1640,15 @@ input {
     -ms-flex-order: 1;
     -webkit-box-ordinal-group: 2;
     order: 1; } }
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .page-header {/* Medium screen, non-retina */
     background-image: url("../img/header-bg1200.jpg"); } }
-
-@media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
   .page-header {/* Medium screen, non-retina */
     background-image: url("../img/header-bg768.jpg"); } }
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px), only screen and (min-resolution: 2dppx) and (max-width: 768px) {
   .page-header {/* Medium screen, retina */
     background-image: url("../img/header-bg768@2x.jpg"); } }
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .page-header {/* Large screen, retina */
     background-image: url("../img/header-bg2.jpg"); } }

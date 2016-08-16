@@ -3,7 +3,7 @@ a {
   font-weight: bold;
   color: $link-color;
   outline: none;
-  transition: all .2s linear;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
 
   &:hover {

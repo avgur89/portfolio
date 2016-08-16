@@ -7,3 +7,103 @@
 .contact__heading {
   font-weight: normal;
 }
+
+.contact__info {
+  position: relative;
+  min-height: 150px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-image: url('../img/svg/contact-logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  fill: #fff;
+}
+
+.contact__info-wrapper {
+  @include center(both);
+}
+
+.contact__email-link,
+.contact__phone-link {
+  display: inline-block;
+  padding: 5px;
+  font-family: $font-family-headings;
+  font-size: 2rem;
+  font-weight: normal;
+  color: $text-color;
+
+  &:hover {
+    color: #000;
+  }
+
+  &:active,
+  &:focus {
+    color: #000;
+  }
+}
+
+.contact__email {
+  display: block;
+}
+
+.contact__phone {
+  display: block;
+}
+
+
+/* -------- Contact Form -------- */
+
+.contact__form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact__label {
+  display: block;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.contact__input {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact__input-textarea {
+  margin-bottom: 50px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid $border-color;
+  outline: none;
+  color: $text-color;
+
+  &:active,
+  &:focus {
+    border-color: $border-color-hover;
+  }
+}
+
+.contact__btn-submit {
+  display: block;
+  width: 100%;
+  padding: 15px 30px;
+  border: 1px solid $dark-bg;
+  outline: none;
+  color: $text-color-white;
+  background-color: $dark-bg;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+  }
+
+  &:active,
+  &:focus {
+    background-color: #000;
+    border-color: #000;
+  }
+}
