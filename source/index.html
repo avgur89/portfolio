@@ -171,7 +171,7 @@
 					</div>
 				</div>
 
-				<form action="" id="form" class="contact__form" name="mail-form">
+				<form action="https://formspree.io/avgur89@gmail.com" method="POST" class="contact__form" name="mail-form">
 					<div class="row">
 						<div class="contact__input-wrapper col-xs-12 col-sm-6">
 							<label class="contact__label" for="name">Name*</label>
@@ -183,13 +183,19 @@
 							<input class="contact__input" type="email" id="email" name="email" required>
 						</div>
 
-						<div class="contact__input-wrapper col-xs-12">
+						<div class="col-xs-12">
 							<label class="contact__label" for="message">Message</label>
 							<textarea class="contact__input  contact__input-textarea" id="message" name="message" rows="8"></textarea>
 						</div>
 
+						<!-- CONFIG -->
+						<input type="text" name="_gotcha" style="display:none">
+						<input type="hidden" name="_next" value="http://localhost:3000/thanks.html">
+						<input type="hidden" name="_subject" value="Message from alexgurov.com">
+						<!-- /CONFIG -->
+
 						<div class="col-xs-12">
-							<button class="btn contact__btn-submit" type="submit">Send</button>
+							<input class="btn contact__btn-submit" type="submit" value="Send">
 						</div>
 					</div>
 				</form>

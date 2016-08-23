@@ -1,0 +1,101 @@
+/* -------- THANKS PAGE  -------- */
+
+.thanks {
+  background-color: $main-bg;
+  padding: 40px 0;
+
+}
+
+.thanks__wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.thanks__heading {
+  margin: 0;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.thanks__envelope {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.thanks__desc {
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+.thanks__continue-btn {
+  display: block;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: $orange;
+  border-color: $orange;
+  color: $text-color-white;
+
+  &:hover {
+    color: $text-color-white;
+    background-color: darken($orange, 5%);
+    border-color: darken($orange, 5%);
+  }
+
+  &:active,
+  &:focus {
+    background-color: darken($orange, 10%);
+    border-color: darken($orange, 10%);
+  }
+}
+
+.thanks-footer__logo {
+  margin-bottom: 10px;
+}
+
+.thanks-footer__social {
+  &--facebook {
+    &:hover {
+      color: #3b5998;
+    }
+
+    &:active,
+    &:focus {
+      color: #3b5998;
+    }
+  }
+
+  &--linkedin {
+    &:hover {
+      color: #00a0dc;
+    }
+
+    &:active,
+    &:focus {
+      color: #00a0dc;
+    }
+  }
+
+  &--github {
+    &:hover {
+      color: #333;
+    }
+
+    &:active,
+    &:focus {
+      color: #333;
+    }
+  }
+}
+
+.thanks-footer__social-item {
+  display: inline-block;
+  padding: 5px;
+  color: $text-color;
+}

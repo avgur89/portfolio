@@ -32,20 +32,8 @@ $(function() {
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
-    submitHandler: function() {
-      $("#form").submit(function() {
-        $.ajax({
-          type: "POST",
-          url: "/php/mail.php",
-          data: $(this).serialize()
-        }).done(function() {
-          alert("Спасибо за заявку!");
-          setTimeout(function() {
-            $("#form").trigger("reset");
-          }, 1000);
-        });
-        return false;
-      });
+    submitHandler: function(form) {
+      form.submit();
     }
   });
 });
