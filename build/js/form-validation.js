@@ -15,7 +15,7 @@ $(function() {
         required: true,
         minlength: 2
       },
-      email: {
+      mail: {
         required: true,
         // Specify that email should be validated
         // by the built-in "email" rule
@@ -28,7 +28,7 @@ $(function() {
         required: "Please enter your name",
         minlength: "Your name must be at least 2 characters long"
       },
-      email: "Please enter a valid email address"
+      mail: "Please enter a valid email address"
     },
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
