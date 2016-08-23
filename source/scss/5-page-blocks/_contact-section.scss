@@ -65,10 +65,13 @@
   text-align: left;
 }
 
+.contact__input-wrapper {
+  margin-bottom: 20px;
+}
+
 .contact__input {
   width: 100%;
   display: block;
-  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -105,5 +108,19 @@
   &:focus {
     background-color: #000;
     border-color: #000;
+  }
+}
+
+// Error validation styles
+.error {
+  display: block;
+  margin-top: 3px;
+  border-color: tomato;
+  color: tomato;
+  text-align: left;
+
+  &:active,
+  &:focus {
+    border-color: tomato;
   }
 }
