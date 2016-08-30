@@ -37,6 +37,10 @@
 }
 
 .page-header__menu {
+  position: fixed;
+  display: none;
+  z-index: 99;
+  width: 100%;
   padding: 10px 0;
   background-color: #222;
 }
@@ -103,4 +107,9 @@
   &:focus {
     color: $gray-70;
   }
+}
+
+.in-view {
+  opacity: 1 !important;
+  display: block;
 }

@@ -649,6 +649,10 @@ input {
   padding: 0 15px; }
 
 .page-header__menu {
+  position: fixed;
+  display: none;
+  z-index: 99;
+  width: 100%;
   padding: 10px 0;
   background-color: #222; }
 
@@ -702,6 +706,11 @@ input {
     color: #f4f4f4; }
   .main-nav__link:active, .main-nav__link:focus {
     color: #adadad; }
+
+.in-view {
+  opacity: 1 !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  display: block; }
 
 /* -------- FOOTER -------- */
 .page-footer {

@@ -1,4 +1,4 @@
-// requires: mail.js
+// requires: plugins.js
 
 
 // Wait for the DOM to be ready
