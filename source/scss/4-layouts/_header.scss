@@ -113,3 +113,97 @@
   opacity: 1 !important;
   display: block;
 }
+
+
+/* -------- Hamburger Icon -------- */
+
+.page-header__hamburger {
+  display: none;
+  text-align: right;
+}
+
+.page-header__hamburger-ico {
+  display: none;
+  width: 40px;
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover .divide {
+    background-color: $link-color-hover;
+  }
+
+  .divide {
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    background-color: $link-color;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/* -------- TABLET MEDIA QUERIES --------*/
+
+/* -------- Hamburger Icon -------- */
+
+.page-header__hamburger {
+  @include screen('tablet') {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.page-header__hamburger-ico {
+  @include screen('tablet') {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/* -------- Header-navigation -------- */
+
+.main-nav {
+  @include screen('tablet') {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include screen('tablet') {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+.main-nav__item {
+  @include screen('tablet') {
+    display: block;
+    text-align: center;
+  }
+}
+
+.main-nav__link {
+  @include screen('tablet') {
+    display: block;
+    margin-left: 0;
+    padding: 10px 0;
+    color: $gray_80;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  &:hover {
+    color: $text-color-white;
+    background-color: $dark-bg;
+  }
+
+  &:active,
+  &:focus {
+    color: $gray-70;
+    background-color: $dark-bg;
+  }
+}

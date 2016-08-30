@@ -27,7 +27,7 @@
 	<link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-57x57.png">
 	
 </head>
-<body class="page">
+<body class="page" id="home">
 	<header class="page-header">
 	  <div class="page-header__hero">
 	    <h1 class="page-header__heading  page-header__heading--primary">Alexander Gurov</h1>
@@ -53,7 +53,15 @@
 	        </a>
 	      </div>
 	
-	      <nav class="main-nav col-xs-10">
+	      <div class="page-header__hamburger col-xs-10">
+	        <div class="page-header__hamburger-ico">
+	      		<span class="divide"></span>
+	      		<span class="divide"></span>
+	      		<span class="divide"></span>
+	    		</div>
+	      </div> <!-- end page-header__hamburger -->
+	
+	      <nav class="main-nav col-sm-10 col-xs-12">
 	        <ul class="main-nav__list">
 	          <li class="main-nav__item"><a class="main-nav__link" href="#home" title="Home">Home</a></li>
 	          <li class="main-nav__item"><a class="main-nav__link" href="#about" title="About">About</a></li>
@@ -69,7 +77,7 @@
 	
 
 	<main class="main page-content">
-		<section class="about">
+		<section class="about" id="about">
 			<div class="about__image">
 				<img src="img/about-bg.png" width="450" height="995" alt="The Rock">
 			</div>
@@ -81,7 +89,7 @@
 		</section> <!-- end about -->
 
 
-		<section class="skills">
+		<section class="skills" id="skills">
 			<div class="skills__wrapper">
 				<h2 class="skills__heading">Skills</h2>
 
@@ -114,7 +122,7 @@
 		</section> <!-- end skills -->
 
 
-		<section class="works">
+		<section class="works" id="works">
 			<div class="works__wrapper">
 				<h2 class="works__heading">Works</h2>
 
@@ -235,7 +243,7 @@
 		</section> <!-- end works -->
 
 
-		<section class="resume">
+		<section class="resume" id="resume">
 			<div class="resume__wrapper">
 				<h2 class="resume__heading">Resumé Download</h2>
 				<p class="resume__desc">For agencies interested in a hard copy of my resumé as a PDF.</p>
@@ -244,7 +252,7 @@
 		</section> <!-- end resume -->
 
 
-		<section class="contact">
+		<section class="contact" id="contact">
 			<div class="contact__wrapper">
 				<h2 class="contact__heading">Contact Me</h2>
 

@@ -712,6 +712,39 @@ input {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   display: block; }
 
+/* -------- Hamburger Icon -------- */
+.page-header__hamburger {
+  display: none;
+  text-align: right; }
+
+.page-header__hamburger-ico {
+  display: none;
+  width: 40px;
+  padding: 5px;
+  cursor: pointer; }
+  .page-header__hamburger-ico:hover .divide {
+    background-color: silver; }
+  .page-header__hamburger-ico .divide {
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #e6e6e6; }
+    .page-header__hamburger-ico .divide:last-child {
+      margin-bottom: 0; }
+
+/* -------- TABLET MEDIA QUERIES --------*/
+/* -------- Hamburger Icon -------- */
+
+/* -------- Header-navigation -------- */
+
+.main-nav__link:hover {
+  color: #f4f4f4;
+  background-color: #1c1e22; }
+
+.main-nav__link:active, .main-nav__link:focus {
+  color: #adadad;
+  background-color: #1c1e22; }
+
 /* -------- FOOTER -------- */
 .page-footer {
   padding: 150px 0 20px 0;
@@ -1743,3 +1776,26 @@ input {
   @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), only screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .page-header {/* Large screen, retina */
     background-image: url("../img/header-bg2.jpg"); } }
+  @media screen and (max-width: 768px) {
+  .page-header__hamburger {
+    display: inline-block;
+    vertical-align: middle; }
+  .page-header__hamburger-ico {
+    display: inline-block;
+    vertical-align: middle; }
+  .main-nav {
+    display: none; }
+  .main-nav__list {
+    text-align: center;
+    padding: 10px 0; }
+  .main-nav__item {
+    display: block;
+    text-align: center; }
+  .main-nav__link {
+    display: block;
+    margin-left: 0;
+    padding: 10px 0;
+    color: #ccc;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.6px; } }
