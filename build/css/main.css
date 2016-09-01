@@ -684,6 +684,9 @@ input {
   height: 50px; }
 
 /* -------- Header-navigation -------- */
+.main-nav {
+  display: block; }
+
 .main-nav__list {
   padding: 0;
   margin: 0;
@@ -1784,7 +1787,9 @@ input {
     display: inline-block;
     vertical-align: middle; }
   .main-nav {
-    display: none; }
+    display: none;
+    margin: 0 auto;
+    width: 100%; }
   .main-nav__list {
     text-align: center;
     padding: 10px 0; }

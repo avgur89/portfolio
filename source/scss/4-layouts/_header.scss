@@ -78,6 +78,10 @@
 
 /* -------- Header-navigation -------- */
 
+.main-nav {
+  display: block;
+}
+
 .main-nav__list {
   padding: 0;
   margin: 0;
@@ -168,6 +172,8 @@
 .main-nav {
   @include screen('tablet') {
     display: none;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
