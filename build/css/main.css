@@ -740,13 +740,8 @@ input {
 
 /* -------- Header-navigation -------- */
 
-.main-nav__link:hover {
-  color: #f4f4f4;
-  background-color: #1c1e22; }
-
-.main-nav__link:active, .main-nav__link:focus {
-  color: #adadad;
-  background-color: #1c1e22; }
+/* -------- LANDSCAPE MEDIA QUERIES --------*/
+/* -------- Header-navigation -------- */
 
 /* -------- FOOTER -------- */
 .page-footer {
@@ -1803,4 +1798,18 @@ input {
     color: #ccc;
     font-weight: normal;
     text-transform: uppercase;
-    letter-spacing: 0.6px; } }
+    letter-spacing: 0.6px; }
+  .main-nav__link:hover {
+    color: #f4f4f4;
+    background-color: #1c1e22; }
+  .main-nav__link:active, .main-nav__link:focus {
+    color: #adadad;
+    background-color: #1c1e22; } }
+  @media only screen and (orientation: landscape) {
+  .main-nav__item {
+    display: inline-block;
+    text-align: center; }
+  .main-nav__link {
+    display: inline-block;
+    margin-left: 0;
+    padding: 10px; } }

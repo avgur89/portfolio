@@ -153,15 +153,13 @@
 
 /* -------- Hamburger Icon -------- */
 
-.page-header__hamburger {
-  @include screen('tablet') {
+@include screen('tablet') {
+  .page-header__hamburger {
     display: inline-block;
     vertical-align: middle;
   }
-}
 
-.page-header__hamburger-ico {
-  @include screen('tablet') {
+  .page-header__hamburger-ico {
     display: inline-block;
     vertical-align: middle;
   }
@@ -169,30 +167,24 @@
 
 /* -------- Header-navigation -------- */
 
-.main-nav {
-  @include screen('tablet') {
+@include screen('tablet') {
+  .main-nav {
     display: none;
     margin: 0 auto;
     width: 100%;
   }
-}
 
-.main-nav__list {
-  @include screen('tablet') {
+  .main-nav__list {
     text-align: center;
     padding: 10px 0;
   }
-}
 
-.main-nav__item {
-  @include screen('tablet') {
+  .main-nav__item {
     display: block;
     text-align: center;
   }
-}
 
-.main-nav__link {
-  @include screen('tablet') {
+  .main-nav__link {
     display: block;
     margin-left: 0;
     padding: 10px 0;
@@ -200,16 +192,33 @@
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.6px;
+
+    &:hover {
+      color: $text-color-white;
+      background-color: $dark-bg;
+    }
+
+    &:active,
+    &:focus {
+      color: $gray-70;
+      background-color: $dark-bg;
+    }
+  }
+}
+
+/* -------- LANDSCAPE MEDIA QUERIES --------*/
+
+/* -------- Header-navigation -------- */
+
+@media only screen and (orientation: landscape) {
+  .main-nav__item {
+    display: inline-block;
+    text-align: center;
   }
 
-  &:hover {
-    color: $text-color-white;
-    background-color: $dark-bg;
-  }
-
-  &:active,
-  &:focus {
-    color: $gray-70;
-    background-color: $dark-bg;
+  .main-nav__link {
+    display: inline-block;
+    margin-left: 0;
+    padding: 10px;
   }
 }
