@@ -65,6 +65,11 @@ var
 		out: dest + 'fonts/'
 	},
 
+	fontAwesome = {
+		in: src + 'scss/3-components/font-awesome/fonts/*.*',
+		out: dest + 'fonts/'
+	},
+
 	libs = {
     in: src + 'libs/**/*',
 		out: dest + 'libs/'
@@ -122,6 +127,13 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest(fonts.out));
 });
 
+// copy font-awesome icon font
+gulp.task('fontAwesome', function() {
+	return gulp.src(fontAwesome.in)
+		.pipe(newer(fontAwesome.out))
+		.pipe(gulp.dest(fontAwesome.out));
+});
+
 // copy libs
 gulp.task('libs', function() {
 	return gulp.src(libs.in)
@@ -159,7 +171,7 @@ gulp.task('browsersync', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'browserify', 'browsersync'], function() {
+gulp.task('default', ['html', 'images', 'fonts', 'fontAwesome', 'libs', 'sass', 'browserify', 'browsersync'], function() {
 
 	// html changes
 	gulp.watch(html.watch, ['html', browsersync.reload]);
