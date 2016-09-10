@@ -60,7 +60,7 @@ exports.skillbarRender = function() {
 
     // Start skillbar animation
     function skillbarAnimate () {
-      var value = ($this.attr('value') / 100);
+      var value = ($this.attr('val') / 100);
 
       bar.animate(value, {
         step: function(state, bar) {
