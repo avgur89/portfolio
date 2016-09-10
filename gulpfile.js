@@ -1,34 +1,34 @@
 // Gulp.js configuration
 
 // include gulp and plugins
-var
-	gulp = require('gulp'),
-	newer = require('gulp-newer'),
-	concat = require('gulp-concat'),
-	preprocess = require('gulp-preprocess'),
-	htmlclean = require('gulp-htmlclean'),
-	imagemin = require('gulp-imagemin'),
-	sass = require('gulp-sass'),
-	pleeease = require('gulp-pleeease'),
-	jshint = require('gulp-jshint'),
-	deporder = require('gulp-deporder'),			// Dependency Management (// requires: scrollTo.js tweetForm.js) at the top of fontloader.js. Will load first scrollTo then tweetForm
-	stripdebug = require('gulp-strip-debug'),
-	uglify = require('gulp-uglify'),
-	size = require('gulp-size'),
-	del = require('del'),
-	browsersync = require('browser-sync');
-	pkg = require('./package.json');
+var gulp = require('gulp');
+var	newer = require('gulp-newer');
+var	preprocess = require('gulp-preprocess');
+var	htmlclean = require('gulp-htmlclean');
+var	imagemin = require('gulp-imagemin');
+var	sass = require('gulp-sass');
+var	pleeease = require('gulp-pleeease');
+var	jshint = require('gulp-jshint');
+var	stripdebug = require('gulp-strip-debug');
+var	size = require('gulp-size');
+var	del = require('del');
+var	browsersync = require('browser-sync');
+var	uglify = require('gulp-uglify');
+var	browserify = require('browserify');
+var	source = require('vinyl-source-stream');
+var	buffer = require('vinyl-buffer');
+var	pkg = require('./package.json');
 
 // file locations
 var
 	devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),  // echo %NODE_ENV%, set NODE_ENV=production (or development)
 
-	source = 'source/',
+	src = 'source/',
 	dest = 'build/',
 
 	html = {
-		in: source + '*.html',
-		watch: [source + '*.html', source + '_html_inc/**/*'],
+		in: src + '*.html',
+		watch: [src + '*.html', src + '_html_inc/**/*'],
 		out: dest,
 		context: {
 			devBuild: devBuild,
@@ -38,13 +38,13 @@ var
 	},
 
 	images = {
-		in: source + 'img/**/*',
+		in: src + 'img/**/*',
 		out: dest + 'img/'
 	},
 
 	css = {
-		in: source + 'scss/main.scss',
-		watch: [source + 'scss/**/*'],
+		in: src + 'scss/main.scss',
+		watch: [src + 'scss/**/*'],
 		out: dest + 'css/',
 		sassOpts: {
 			outputStyle: 'nested',
@@ -61,17 +61,17 @@ var
 	},
 
 	fonts = {
-		in: source + 'fonts/**/*',
+		in: src + 'fonts/*.*',
 		out: dest + 'fonts/'
 	},
 
 	libs = {
-    in: source + 'libs/**/*',
+    in: src + 'libs/**/*',
 		out: dest + 'libs/'
   },
 
 	js = {
-		in: source + 'js/**/*',
+		in: src + 'js/**/*',
 		out: dest + 'js/',
 		filename: 'main.js'
 	},
@@ -140,28 +140,17 @@ gulp.task('sass', function() {
 		.pipe(browsersync.reload({ stream: true }));
 });
 
-gulp.task('js', function() {
-	if (devBuild) {
-		return gulp.src(js.in)
-			.pipe(newer(js.out))
-			.pipe(jshint())
-			.pipe(jshint.reporter('default'))
-			.pipe(jshint.reporter('fail'))
-			.pipe(gulp.dest(js.out));
-	}
-	else {
-		del([
-			dest + 'js/*'
-		]);
-		return gulp.src(js.in)
-			.pipe(deporder())
-			.pipe(concat(js.filename))
-			.pipe(size({ title: 'JS in '}))
-			.pipe(stripdebug())
-			.pipe(uglify())
-			.pipe(size({ title: 'JS out '}))
-			.pipe(gulp.dest(js.out));
-	}
+// load modules in one file
+gulp.task('browserify', function() {
+  browserify({
+    entries: './source/js/main.js',
+    debug: true
+  })
+  .bundle()
+  .pipe(source('main.min.js'))
+  .pipe(buffer())
+  .pipe(uglify())
+  .pipe(gulp.dest('./build/js'));
 });
 
 // browser sync
@@ -170,7 +159,7 @@ gulp.task('browsersync', function() {
 });
 
 // default task
-gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'js', 'browsersync'], function() {
+gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'browserify', 'browsersync'], function() {
 
 	// html changes
 	gulp.watch(html.watch, ['html', browsersync.reload]);
@@ -188,6 +177,6 @@ gulp.task('default', ['html', 'images', 'fonts', 'libs', 'sass', 'js', 'browsers
 	gulp.watch(css.watch, ['sass']);
 
 	// javascript changes
-	gulp.watch(js.in, ['js', browsersync.reload]);
+	gulp.watch(js.in, ['browserify', browsersync.reload]);
 
 });

@@ -1,8 +1,6 @@
-// requires: plugins.js
+// Form validation module
 
-
-// Wait for the DOM to be ready
-$(function() {
+exports.validate = function() {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
   $("form[name='mail-form']").validate({
@@ -36,4 +34,4 @@ $(function() {
       form.submit();
     }
   });
-});
+};

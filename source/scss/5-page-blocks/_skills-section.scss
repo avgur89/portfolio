@@ -88,3 +88,15 @@
   left: 10px;
   text-transform: uppercase;
 }
+
+
+/* -------- TABLET MEDIA QUERIES --------*/
+
+/* -------- Skillbar -------- */
+
+@include screen('tablet') {
+  .skillbar {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

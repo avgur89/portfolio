@@ -1111,6 +1111,9 @@ input {
   left: 10px;
   text-transform: uppercase; }
 
+/* -------- TABLET MEDIA QUERIES --------*/
+/* -------- Skillbar -------- */
+
 /* -------- WORKS SECTION -------- */
 .works {
   background-color: #1c1e22; }
@@ -1804,7 +1807,10 @@ input {
     background-color: #1c1e22; }
   .main-nav__link:active, .main-nav__link:focus {
     color: #adadad;
-    background-color: #1c1e22; } }
+    background-color: #1c1e22; }
+  .skillbar {
+    margin-left: 15px;
+    margin-right: 15px; } }
   @media only screen and (orientation: landscape) {
   .main-nav__item {
     display: inline-block;
