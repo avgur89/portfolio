@@ -26,7 +26,6 @@
     "browserify": "^13.1.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-deporder": "^1.1.0",
     "gulp-htmlclean": "^2.7.6",
     "gulp-imagemin": "^3.0.1",
     "gulp-jshint": "^2.0.1",
