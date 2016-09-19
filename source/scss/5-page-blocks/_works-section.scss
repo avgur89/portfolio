@@ -4,6 +4,10 @@
   background-color: $dark-bg;
 }
 
+.works__wrapper {
+  @include container();
+} 
+
 .works__heading {
   font-weight: normal;
   color: $text-color-white;
@@ -37,11 +41,12 @@
 
 .works__item-image {
   transition: transform 0.4s ease-in-out;
+  -webkit-backface-visibility: hidden;
 }
 
 .works__item-link {
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   color: $text-color-white;
 
   &:hover {
@@ -53,6 +58,7 @@
   @include center('both');
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  -webkit-backface-visibility: hidden;
 }
 
 .works__item-overlay {
@@ -64,12 +70,14 @@
   right: 0;
   transition: opacity 0.4s ease-in-out;
   background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backface-visibility: hidden;
 }
 
 .works__item-wrapper {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
 
   &:hover {
     cursor: pointer;

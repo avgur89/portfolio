@@ -4,8 +4,10 @@
 var $window = $(window);
 var $pageHeader = $('.page-header');
 var $pageHeaderMenu = $('.page-header__menu');
-var $hamburgerIcon = $('.page-header__hamburger-ico');
+var $pageHeaderMenuHeight = $pageHeaderMenu.outerHeight();
 var $mainNav = $('.main-nav');
+var $mainNavHeight = $mainNav.outerHeight();
+var $hamburgerIcon = $('.page-header__hamburger-ico');
 
 
 // Check if element in the view, then trigger skillbar animation
@@ -28,17 +30,20 @@ exports.menuToggle = function() {
 exports.scrollTo = function(e) {
   e.preventDefault();
   var href = $(this).attr('href');
+  var delay = 1000;
 
-  if( $window.innerWidth() <= 768 ) {
-    $('html body').animate({
-      scrollTop: $(href).offset().top - ($pageHeaderMenu.outerHeight() - $mainNav.outerHeight())
-    }, 1000, function() {
-      $mainNav.slideUp();
-    });
+  function slideUp() {
+    $mainNav.slideUp();
+  }
+
+  if ( $window.innerWidth() <= 768 ) {
+    $('html, body').animate({
+      scrollTop: $(href).offset().top - ($pageHeaderMenuHeight - $mainNavHeight)
+    }, delay, slideUp);
   } else {
-    $('html body').animate({
-      scrollTop: $(href).offset().top - $pageHeaderMenu.outerHeight()
-    }, 1000);
+    $('html, body').animate({
+      scrollTop: $(href).offset().top - $pageHeaderMenuHeight
+    }, delay);
   }
 };
 

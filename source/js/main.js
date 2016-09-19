@@ -12,8 +12,10 @@ function _registerEventHandlers() {
   $('a[href="#"]').on('click', helpers.linkDisabled);
   $('.page-header__hamburger-ico').on('click', mainNav.menuToggle);
   $('.main-nav__link').on('click', mainNav.scrollTo);
+  $('.works__item-wrapper').on('blur', helpers.worksItemOnMobile);
 }
 
 _registerEventHandlers();
+
 formValidation.validate();
 skillbar.skillbarRender();
