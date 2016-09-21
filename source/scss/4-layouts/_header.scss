@@ -1,14 +1,16 @@
 /* -------- PAGE-HEADER  -------- */
 
 .page-header {
-  position: relative;
   min-height: 100%;
   background-image: url('../img/header-bg2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
   overflow: hidden;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed !important;
 
   @media only screen and (min-width: 768px) and (max-width: 1200px) {
     /* Medium screen, non-retina */

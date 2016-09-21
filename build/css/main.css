@@ -2651,14 +2651,13 @@ input {
 
 /* -------- PAGE-HEADER  -------- */
 .page-header {
-  position: relative;
   min-height: 100%;
   background-image: url("../img/header-bg2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  overflow: hidden;
   background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden; }
+  background-attachment: fixed !important; }
 
 /* -------- PAGE HEADER-MENU  -------- */
 .page-header__wrapper {
