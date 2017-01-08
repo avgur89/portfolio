@@ -3169,6 +3169,9 @@ input {
   transition: -webkit-transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
   -webkit-backface-visibility: hidden; }
 
 .works__item-link {
@@ -3186,20 +3189,26 @@ input {
   transform: translate(-50%, -50%);
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  -webkit-transition: opacity 0.4s ease-in-out;
+  visibility: hidden;
   transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
   -webkit-backface-visibility: hidden; }
 
 .works__item-overlay {
   position: absolute;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backface-visibility: hidden; }
 
@@ -3211,9 +3220,11 @@ input {
   .works__item-wrapper:hover {
     cursor: pointer; }
     .works__item-wrapper:hover .works__item-overlay {
+      visibility: visible;
       opacity: 1;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
     .works__item-wrapper:hover .works__item-desc {
+      visibility: visible;
       opacity: 1;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
     .works__item-wrapper:hover .works__item-image {

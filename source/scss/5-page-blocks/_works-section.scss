@@ -6,7 +6,7 @@
 
 .works__wrapper {
   @include container();
-} 
+}
 
 .works__heading {
   font-weight: normal;
@@ -41,6 +41,9 @@
 
 .works__item-image {
   transition: transform 0.4s ease-in-out;
+  -webkit-transition: transform 0.4s ease-in-out;
+  -moz-transition: transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
   -webkit-backface-visibility: hidden;
 }
 
@@ -57,18 +60,26 @@
 .works__item-desc {
   @include center('both');
   opacity: 0;
+  visibility: hidden;
   transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
   -webkit-backface-visibility: hidden;
 }
 
 .works__item-overlay {
   position: absolute;
   opacity: 0;
+  visibility: hidden;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backface-visibility: hidden;
 }
@@ -83,10 +94,12 @@
     cursor: pointer;
 
     .works__item-overlay {
+      visibility: visible;
       opacity: 1;
     }
 
     .works__item-desc {
+      visibility: visible;
       opacity: 1;
     }
 
